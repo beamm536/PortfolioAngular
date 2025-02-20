@@ -1,1 +1,44 @@
 <p>update-proyecto works!</p>
+<hr>
+<form (ngSubmit)="actualizarProyecto()">
+    <div class="input-container">
+      <input 
+        type="text" 
+        placeholder="Título del proyecto" 
+        [(ngModel)]="titulo" 
+        name="titulo" 
+        required
+      >
+    </div>
+  
+    <div class="input-container">
+      <textarea 
+        placeholder="Descripción del proyecto" 
+        [(ngModel)]="descripcion" 
+        name="descripcion" 
+        required
+      ></textarea>
+    </div>
+  
+    <div class="input-container">
+      <input 
+        type="text" 
+        placeholder="Tecnologías utilizadas" 
+        [(ngModel)]="tecnologias" 
+        name="tecnologias" 
+        required
+      >
+    </div>
+  
+    <div class="input-container">
+      <input 
+        type="text" 
+        placeholder="Participantes" 
+        [(ngModel)]="participantes" 
+        name="participantes" 
+        required
+      >
+    </div>
+  
+    <button type="submit" class="submit">Actualizar</button>
+  </form>
