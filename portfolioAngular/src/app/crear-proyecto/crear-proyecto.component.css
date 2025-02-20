@@ -1,6 +1,8 @@
 .form {
   background-color: #fff;
   display: block;
+  justify-content: center;
+  margin-left: 35%;
   padding: 1rem;
   max-width: 350px;
   border-radius: 0.5rem;
