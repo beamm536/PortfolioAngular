@@ -40,3 +40,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+#aqui agregamos el archivo que no queramos que se suba al repositorio público
+"src/environments/environment.firebase.ts" 
