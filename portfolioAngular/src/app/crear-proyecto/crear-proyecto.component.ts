@@ -6,7 +6,7 @@ import { ServicioService } from '../servicio.service';
   selector: 'app-crear-proyecto',
   imports: [FormsModule],
   templateUrl: './crear-proyecto.component.html',
-  styleUrl: './crear-proyecto.component.scss'
+  styleUrl: './crear-proyecto.component.css'
 })
 export class CrearProyectoComponent {
 
