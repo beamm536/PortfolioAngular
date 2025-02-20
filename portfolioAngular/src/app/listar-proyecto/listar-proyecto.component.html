@@ -1,2 +1,27 @@
 <p>listar-proyecto works!</p>
 <hr>
+
+<!-- <div *ngFor="let proyecto of proyectos">
+    <h3> {{ proyecto.titulo }} </h3>
+    <p> Descripcion: {{ proyecto.descripcion }} </p>
+    <p> tecnologias: {{ proyecto.tecnologias }} </p>
+    <p> particpantes: {{ proyecto.participantes }} </p>
+</div>  -->
+
+<div class="card-container">
+    <div *ngFor="let proyecto of proyectos" class="card">
+      <div class="card-header">
+        <h3>{{ proyecto.titulo }}</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Descripción:</strong> {{ proyecto.descripcion }}</p>
+        <p><strong>Tecnologías:</strong> {{ proyecto.tecnologias }}</p>
+        <p><strong>Participantes:</strong> {{ proyecto.participantes }}</p>
+      </div>
+      <div class="card-footer">
+        <!-- Puedes agregar alguna acción, como un botón o enlace aquí -->
+        <button class="btn-more">Ver más</button>
+      </div>
+    </div>
+  </div>
+  
