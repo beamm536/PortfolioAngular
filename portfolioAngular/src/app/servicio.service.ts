@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { addDoc, collection, Firestore, getDocs, query } from '@angular/fire/firestore';
+import { addDoc, collection, doc, Firestore, getDocs, query, updateDoc } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +26,23 @@ export class ServicioService {
     return(
       await getDocs(query(collection(this.firestore, 'proyectos')))
     ).docs.map((proyectos) => proyectos.data());
+  }
+
+
+  async updateProyectos(id: string, titulo: string, descripcion: string, tecnologias: string, participantes: string){
+    
+    //cogemos la referencia del proyecto -- id -- que vmoas a usar para actulizar
+    const proyectoRef = doc(this.firestore, 'proyectos', id);
+
+
+    updateDoc(proyectoRef, {
+      titulo: titulo,
+      descripcion: descripcion,
+      tecnologias: tecnologias,
+      participantes: participantes
+    });
+
+    console.log(`proyecto  ${titulo} actualizado correctamente.`);
   }
 
 }
