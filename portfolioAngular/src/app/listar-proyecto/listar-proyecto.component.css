@@ -44,6 +44,8 @@
     background-color: #f7f7f7;
     padding: 10px 15px;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
   }
   
   /* Botón de acción */
@@ -56,9 +58,21 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  
+  .btn-edit{
+    background-color: #3dbe6c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
   .btn-more:hover {
     background-color: #0056b3;
+  }
+  
+  .btn-edit:hover {
+    background-color: #2f9153;
   }
   
   /* Efecto de hover para la tarjeta */
