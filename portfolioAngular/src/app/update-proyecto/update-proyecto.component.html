@@ -1,6 +1,18 @@
 <p>update-proyecto works!</p>
 <hr>
 <form (ngSubmit)="actualizarProyecto()">
+
+  <div class="input-container">
+    <input 
+      type="text" 
+      placeholder="id del proyecto" 
+      [(ngModel)]="id" 
+      name="id" 
+      required
+    >
+  </div>  
+  
+  
     <div class="input-container">
       <input 
         type="text" 
