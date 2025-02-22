@@ -22,9 +22,9 @@
         <!-- Puedes agregar alguna acción, como un botón o enlace aquí -->
         <button class="btn-more">Ver más</button>
 
-        <!-- <a [routerLink]="['/actualizar-proyecto', proyecto.id]"> -->
+        <a [routerLink]="['/actualizar-proyecto', proyecto.titulo | slugify]">
           <button class="btn-edit">Editar</button>
-        <!-- </a>  -->
+        </a> 
       </div>
     </div>
   </div>
