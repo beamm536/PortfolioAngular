@@ -1,8 +1,8 @@
 export const firebaseConfig = {
-    apiKey: "AIzaSyDVQ23AsZ2DqY3EooPM1f6CTzvyUY9l7-o",
-    authDomain: "intermodular-angular-firebase.firebaseapp.com",
-    projectId: "intermodular-angular-firebase",
-    storageBucket: "intermodular-angular-firebase.firebasestorage.app",
-    messagingSenderId: "71119221853",
-    appId: "1:71119221853:web:1eb6609cdde9db033089b4"
+    apiKey: "AIzaSyC1bT_rpQrlFSktVU7RlimbbPCC2xPCwpc",
+    authDomain: "intermodular-26c92.firebaseapp.com",
+    projectId: "intermodular-26c92",
+    storageBucket: "intermodular-26c92.firebasestorage.app",
+    messagingSenderId: "508747488825",
+    appId: "1:508747488825:web:1359b1cdfb4c67211937e8"
   };
