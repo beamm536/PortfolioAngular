@@ -7,5 +7,6 @@ export const routes: Routes = [
 
     {path: 'crear-proyecto', component: CrearProyectoComponent},
     {path: 'listar-proyecto', component: ListarProyectoComponent},
-    {path: 'actualizar-proyecto', component: UpdateProyectoComponent}
+    {path: 'actualizar-proyecto/:id', component: UpdateProyectoComponent }
+
 ];

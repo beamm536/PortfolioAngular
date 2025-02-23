@@ -1,56 +1,48 @@
 <p>update-proyecto works!</p>
-<hr>
-<form (ngSubmit)="actualizarProyecto()">
+<hr />
+<div *ngIf="proyecto">
+  <h2>Editar Proyecto</h2>
+  <form (ngSubmit)="actualizarProyecto()">
+    <div class="input-container">
+      <input
+        type="text"
+        placeholder="Título"
+        [(ngModel)]="titulo"
+        name="titulo"
+        required
+      />
+    </div>
 
-  <div class="input-container">
-    <input 
-      type="text" 
-      placeholder="id del proyecto" 
-      [(ngModel)]="id" 
-      name="id" 
-      required
-    >
-  </div>  
-  
-  
     <div class="input-container">
-      <input 
-        type="text" 
-        placeholder="Título del proyecto" 
-        [(ngModel)]="titulo" 
-        name="titulo" 
+      <input
+        type="text"
+        placeholder="Descripción"
+        [(ngModel)]="descripcion"
+        name="descripcion"
         required
-      >
+      />
     </div>
-  
+
     <div class="input-container">
-      <textarea 
-        placeholder="Descripción del proyecto" 
-        [(ngModel)]="descripcion" 
-        name="descripcion" 
+      <input
+        type="text"
+        placeholder="Tecnologías"
+        [(ngModel)]="tecnologias"
+        name="tecnologias"
         required
-      ></textarea>
+      />
     </div>
-  
+
     <div class="input-container">
-      <input 
-        type="text" 
-        placeholder="Tecnologías utilizadas" 
-        [(ngModel)]="tecnologias" 
-        name="tecnologias" 
+      <input
+        type="text"
+        placeholder="Participantes"
+        [(ngModel)]="participantes"
+        name="participantes"
         required
-      >
+      />
     </div>
-  
-    <div class="input-container">
-      <input 
-        type="text" 
-        placeholder="Participantes" 
-        [(ngModel)]="participantes" 
-        name="participantes" 
-        required
-      >
-    </div>
-  
-    <button type="submit" class="submit">Actualizar</button>
+
+    <button type="submit">Actualizar</button>
   </form>
+</div>
