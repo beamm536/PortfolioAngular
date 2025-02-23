@@ -1,12 +1,11 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { ServicioService } from '../servicio.service';
-import { SlugifyPipe } from "../pipes/slugify.pipe";
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-listar-proyecto',
-  imports: [NgFor, SlugifyPipe, RouterLink],
+  imports: [NgFor, RouterLink],
   templateUrl: './listar-proyecto.component.html',
   styleUrl: './listar-proyecto.component.css'
 })
