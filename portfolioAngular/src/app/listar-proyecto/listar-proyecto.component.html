@@ -19,14 +19,14 @@
       <p><strong>Participantes:</strong> {{ proyecto.participantes }}</p>
     </div>
     <div class="card-footer">
+      <!-- Botón para abrir la ventana emergente -->
       <button class="btn-more" (click)="abrirModal(proyecto)">Ver más</button>
       <a [routerLink]="['/actualizar-proyecto', proyecto.id]">
         <button class="btn-edit">Editar</button>
-      </a>
+      </a>        
     </div>
   </div>
 </div>
-
 <div id="modal" class="modal" *ngIf="mostrarModal">
   <div class="modal-content">
     <span class="close" (click)="cerrarModal()">&times;</span>
@@ -34,7 +34,6 @@
     <p><strong>Descripción:</strong> {{ proyectoSeleccionado?.descripcion }}</p>
     <p><strong>Tecnologías:</strong> {{ proyectoSeleccionado?.tecnologias }}</p>
     <p><strong>Participantes:</strong> {{ proyectoSeleccionado?.participantes }}</p>
-    <button class="btn-eliminar" (click)="eliminarProyecto(proyectoSeleccionado?.id)">Eliminar</button>
   </div>
-</div>
-
+</div>  
+  
