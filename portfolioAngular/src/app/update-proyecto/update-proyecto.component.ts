@@ -7,9 +7,9 @@ import { CommonModule } from '@angular/common'; // Importar CommonModule
 @Component({
   selector: 'app-update-proyecto',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterLink],
+  imports: [FormsModule, CommonModule],
   templateUrl: './update-proyecto.component.html',
-  styleUrls: ['./update-proyecto.component.css'], // 🔥 Arreglamos "styleUrl" a "styleUrls"
+  styleUrls: ['./update-proyecto.component.css'],
 })
 export class UpdateProyectoComponent implements OnInit {
   titulo: string = '';
@@ -17,7 +17,7 @@ export class UpdateProyectoComponent implements OnInit {
   tecnologias: string = '';
   participantes: string = '';
   id: string = '';
-  proyecto: any = {}; // ✅ Asegurar que es un objeto vacío al inicio
+  proyecto: any = {};
 
   constructor(
     private servicio: ServicioService,
