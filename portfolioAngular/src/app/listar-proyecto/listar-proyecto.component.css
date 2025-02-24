@@ -61,7 +61,6 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .btn-edit {
   background-color: #3dbe6c;
   color: white;
@@ -71,7 +70,6 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .btn-more:hover {
   background-color: #0056b3;
 }
@@ -111,19 +109,4 @@
   font-size: 20px;
   font-weight: bold;
   float: right;
-}
-
-/* Botón de acción */
-.btn-eliminar {
-  background-color: #ff0000;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-eliminar:hover {
-  background-color: #b30000;
 }
