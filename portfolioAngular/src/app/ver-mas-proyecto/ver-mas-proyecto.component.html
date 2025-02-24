@@ -1,0 +1,15 @@
+<p>ver-mas-proyecto works!</p>
+
+<!-- Botón para abrir la ventana emergente -->
+<button (click)="abrirModal()">Ver Detalles</button>
+
+<!-- Modal -->
+<div id="modal" class="modal" *ngIf="mostrarModal">
+  <div class="modal-content">
+    <span class="close" (click)="cerrarModal()">&times;</span>
+    <p><strong>Título:</strong> {{ proyecto.titulo }}</p>
+    <p><strong>Descripción:</strong> {{ proyecto.descripcion }}</p>
+    <p><strong>Tecnologías:</strong> {{ proyecto.tecnologias }}</p>
+    <p><strong>Participantes:</strong> {{ proyecto.participantes }}</p>
+  </div>
+</div>
