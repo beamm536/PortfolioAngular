@@ -10,4 +10,8 @@ import { CrearProyectoComponent } from './crear-proyecto/crear-proyecto.componen
 })
 export class AppComponent {
   title = 'portfolioAngular';
+  fotoLogo="assets/logoSin.png";
+  iconoPer="assets/iconoPer.png";
+
+
 }
