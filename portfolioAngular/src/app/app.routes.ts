@@ -4,14 +4,16 @@ import { ListarProyectoComponent } from './listar-proyecto/listar-proyecto.compo
 import { UpdateProyectoComponent } from './update-proyecto/update-proyecto.component';
 import { VerMasProyectoComponent } from './ver-mas-proyecto/ver-mas-proyecto.component';
 import { RegistroUserComponent } from './registro-user/registro-user.component';
+import { LoginUserComponent } from './login-user/login-user.component';
 
 export const routes: Routes = [
 
     {path: 'crear-proyecto', component: CrearProyectoComponent},
     {path: 'listar-proyecto', component: ListarProyectoComponent},
     {path: 'actualizar-proyecto/:id', component: UpdateProyectoComponent },
-    { path: 'ver-mas-proyecto/:id', component: VerMasProyectoComponent },
-    { path: 'registro-user', component: RegistroUserComponent }
+    {path: 'ver-mas-proyecto/:id', component: VerMasProyectoComponent },
+    {path: 'registro-user', component: RegistroUserComponent },
+    {path: 'login-user', component: LoginUserComponent }
       
 
 ];
