@@ -14,25 +14,27 @@ export class LoginUserComponent {
   password: string = "";
 
   constructor(
-    public auth:Auth,
-    private servicio:ServicioService
-  ){}
+    public auth: Auth,
+    private servicio: ServicioService
+  ) { }
 
-  login(){
+  /* LOGIN CON GOOGLE */
+  login() {
     console.log("login")
     signInWithPopup(this.auth, new GoogleAuthProvider());
   }
 
+/* LOGIN CON CORREO Y CONTRASEÑA */
   loginWithMail() {
     console.log("Intentando login con correo:", this.email);
     this.servicio.loginWithMail(this.email, this.password)
-        .then(userCredential => {
-            if (userCredential) {
-                console.log("Usuario autenticado:", userCredential.user);
-            }
-        })
-        .catch(error => console.error("Error en login:", error));
+      .then(userCredential => {
+        if (userCredential) {
+          console.log("Usuario autenticado:", userCredential.user);
+        }
+      })
+      .catch(error => console.error("Error en login:", error));
   }
-  
-  
+
+
 }
