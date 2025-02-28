@@ -1,26 +1,26 @@
-*{
-    font-family: Lato, sans-serif;
-    display: flex;
-    justify-content: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Lato, sans-serif;
 }
 
-
 /* Estilos generales de la barra de navegación */
-.nav {
+/* .nav {
     display: flex;
     justify-content: space-around;
     padding: 10px;
     background-color: #f8f9fa;
     border-radius: 5px;
-  }
-  
-  /* Estilos de los elementos de navegación */
-  .nav-item {
+  } */
+
+/* Estilos de los elementos de navegación */
+/* .nav-item {
     list-style: none;
-  }
-  
-  /* Estilos de los enlaces */
-  .nav-link {
+  } */
+
+/* Estilos de los enlaces */
+/* .nav-link {
     display: block;
     padding: 10px 20px;
     color: #007bff;
@@ -28,18 +28,53 @@
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
-  }
-  
-  /* Estado activo */
-  .nav-link.active,
+  } */
+
+/* Estado activo */
+/* .nav-link.active,
   .nav-link:hover {
     background-color: #007bff;
     color: white;
-  }
-  
-  /* Estilo para enlaces deshabilitados */
-  .nav-link.disabled {
+  } */
+
+/* Estilo para enlaces deshabilitados */
+/* .nav-link.disabled {
     pointer-events: none;
     opacity: 0.6;
+  } */
+
+  .barra-navegacion {
+    border: 2px solid black;
+    height: 30%;
+    background-color: #577a8e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
   }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .usuario {
+    margin-right: -2%;
+  }
+
+  .usuario img {
+    height: 50%;
+    width: 50%;
+  }
+  
+
   
