@@ -1,0 +1,62 @@
+<p>registro-user works!</p>
+<hr>
+
+
+<div class="form-container">
+  <p class="title">REGISTRO</p>
+
+  <!-- Formulario con ngSubmit -->
+  <form class="form" (ngSubmit)="newUser()" [formGroup]="usuarioRegistroForm">
+      <input 
+      type="text" 
+      formControlName="nombre"
+      class="input" 
+      placeholder="Nombre" 
+      name="nombre" 
+      required
+    >
+
+      <input 
+      type="text" 
+      formControlName="apellidos"
+      class="input" 
+      placeholder="Apellidos" 
+      name="apellidos" 
+      required
+    >
+
+    <input 
+    type="date" 
+    formControlName="fechaNacimiento"
+    class="input" 
+    placeholder="Fecha nacimiento" 
+    name="fechaNacimiento" 
+    required
+  >
+
+    <input 
+      type="email" 
+      formControlName="email"
+      class="input" 
+      placeholder="Email" 
+      name="email" 
+      required
+    >
+
+    <input 
+      type="password" 
+      formControlName="password"
+      class="input" 
+      placeholder="Password" 
+      name="password" 
+      required
+    >
+
+    <button type="submit" class="form-btn">Sign in</button>
+  </form>
+
+  
+
+  
+</div>
+
