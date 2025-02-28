@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Auth, signInWithEmailAndPassword, UserCredential } from '@angular/fire/auth';
+import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, UserCredential } from '@angular/fire/auth';
 import { addDoc, collection, doc, Firestore, getDocs, getDoc, updateDoc } from '@angular/fire/firestore';
 
 @Injectable({
@@ -76,5 +76,31 @@ export class ServicioService {
         return null;
     }
     
+  }
+
+
+  async crearUsuarioRegistro(nombre: string, apellidos: string, fechaNacimiento:Date ,email: string, password: string) {
+    try {
+      //creamos el usuario
+      const userCredential: UserCredential = await createUserWithEmailAndPassword(this.auth, email, password);
+      const userId = userCredential.user.uid; //id del usuer registrado
+
+      //guardamos en nuestra coleccion
+      const usuariosRef = collection(this.firestore, 'usuariosAngular');
+      await addDoc(usuariosRef, {
+        uid: userId,
+        nombre,
+        apellidos,
+        fechaNacimiento,
+        email
+      });
+
+      console.log("Usuario registrado correctamente con UID:", userId);
+      return userCredential;
+
+    } catch (error) {
+      console.error("Error al registrar usuario:", error);
+      throw error;
+    }
   }
 }
