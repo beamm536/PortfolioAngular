@@ -1,3 +1,24 @@
 /*@tailwind base;
 @tailwind components;
 @tailwind utilities;*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Esto asegura que el padding y el borde no afecten al tamaño del elemento */
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #577a8e, white);
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
