@@ -1,4 +1,4 @@
-form {
+/*form {
     max-width: 400px;
     margin: 20px auto;
     padding: 20px;
@@ -45,4 +45,123 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+*/
+html, body {
+    height: 100vh !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: linear-gradient(to bottom right, #577a8e, white) !important;
+}
+
+.form-container {
+    max-width: 400px; 
+    width: 100%;
+    margin: 0 auto;
+    padding: 8px; 
+    min-height: 350px; 
+    overflow: auto;
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    border-radius: 6px; 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.input {
+    border: 1px solid #cccccc;
+    background-color: white;
+    border-radius: 6px;
+    padding: 8px; 
+    width: 100%;
+    font-size: 12px; 
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.input:focus,
+.input:valid {
+    border-color: #577a8e;
+    outline: none;
+    box-shadow: 0 0 4px rgba(87, 122, 142, 0.5);
+}
+
+.input[type="date"] {
+    border: 1px solid #cccccc;
+    background-color: white;
+    border-radius: 6px;
+    padding: 8px;
+    width: 100%;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.button {
+    background-color: #51636d;
+    color: white;
+    font-weight: bold;
+    padding: 10px 18px; 
+    border-radius: 6px; 
+    border: none;
+    font-size: 14px; 
+    width: 60%; 
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #4a6572;
+}
+
+.button:focus {
+    background-color: #577a8e;
+    outline: none;
+}
+
+.input .icon.is-left i {
+    margin: 0; 
+    padding: 0; 
+    font-size: 8px; 
+}
+
+label {
+    font-size: 12px; 
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px; 
+    width: 100%;
+    text-align: left;
+}
+
+.sign-up-label {
+    font-size: 12px; 
+    font-weight: normal; 
+    text-align: center; 
+    margin-top: 15px; 
+    color: #777; 
+}
+
+.sign-up-link {
+    
+    color: #577a8e; 
+    font-weight: bold;
+    cursor: pointer; 
+    transition: color 0.3s ease; 
+}
+
+.sign-up-link:hover {
+    color: #577a8e; 
+    text-decoration: underline; 
 }

@@ -1,11 +1,11 @@
-<p>registro-user works!</p>
-<hr>
 
 
+
+<!--
 <div class="form-container">
   <p class="title">REGISTRO</p>
 
-  <!-- Formulario con ngSubmit -->
+  <!- Formulario con ngSubmit ->
   <form class="form" (ngSubmit)="newUser()" [formGroup]="usuarioRegistroForm">
       <input 
       type="text" 
@@ -58,5 +58,99 @@
   
 
   
+</div>--
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+-->
+
+<div class="pag">
+<div class="form-container box p-6 rounded-lg shadow-lg bg-white">
+  <p class="title has-text-centered text-2xl font-bold mb-4">REGISTRO</p>
+
+  <form class="form" (ngSubmit)="newUser()" [formGroup]="usuarioRegistroForm">
+    
+    <div class="field">
+      <label class="label">Nombre</label>
+      <div class="control">
+        <input type="text" formControlName="nombre" class="input" placeholder="Nombre" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Apellidos</label>
+      <div class="control">
+        <input type="text" formControlName="apellidos" class="input" placeholder="Apellidos" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Fecha de Nacimiento</label>
+      <div class="control">
+        <input type="date" formControlName="fechaNacimiento" class="input" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label"  >Email</label>
+      <div class="control">
+        <input type="email" formControlName="email" class="input" placeholder="Email" required>
+      </div>
+      <p class="help is-danger" *ngIf="usuarioRegistroForm.get('email')?.invalid && usuarioRegistroForm.get('email')?.touched">
+        Comprueba que el email esté escrito correctamente.
+      </p>
+      
+    </div>
+
+    <!--<div class="field">
+      <label class="label">Email</label>
+      <div class="control has-icons-left has-icons-right">
+        <input type="email" formControlName="email" class="input is-danger" placeholder="Email" required>
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fas fa-exclamation-triangle"></i>
+        </span>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control has-icons-left has-icons-right">
+        <input type="email" formControlName="email" class="input"
+               [ngClass]="{'is-danger': email.invalid && email.touched}" 
+               placeholder="Email" required>
+    
+        <!-<span class="icon is-small is-left" style="justify-content: center; align-items: center;">
+          <i class="fas fa-envelope" style="color: black; margin: 0; padding: 0;  font-size: 16px; justify-content: center; align-items: center;"></i>
+        </span>--
+    
+        <-- Icono de advertencia solo aparece si el email es inválido y el usuario ha salido del input --
+        <span class="icon is-small is-right" *ngIf="email.invalid && email.touched">
+          <!-<i class="fas fa-exclamation-triangle text-red-500" style="color: red;"></i>-
+        </span>
+      </div>
+    
+      <!- Mensaje de error --
+      <p class="help is-danger" *ngIf="email.invalid && email.touched">
+        Introduce un email válido.
+      </p>
+    </div>-->
+    
+    
+
+    <div class="field">
+      <label class="label">Contraseña</label>
+      <div class="control">
+        <input type="password" formControlName="password" class="input" placeholder="Contraseña" required>
+      </div>
+    </div>
+
+    <button type="submit" class="button is-primary w-full mt-4 transition hover:bg-blue-600">
+      Sign up
+    </button>
+  </form>
+  <p class="sign-up-label">
+    Already have an account? 
+    <span class="sign-up-link" (click)="goToLogin()">Login</span>
+  </p>
+</div>
 </div>
 

@@ -5,6 +5,7 @@ import { UpdateProyectoComponent } from './update-proyecto/update-proyecto.compo
 import { VerMasProyectoComponent } from './ver-mas-proyecto/ver-mas-proyecto.component';
 import { RegistroUserComponent } from './registro-user/registro-user.component';
 import { LoginUserComponent } from './login-user/login-user.component';
+import { LogoutComponent } from './logout/logout.component';
 
 export const routes: Routes = [
 
@@ -13,7 +14,8 @@ export const routes: Routes = [
     {path: 'actualizar-proyecto/:id', component: UpdateProyectoComponent },
     {path: 'ver-mas-proyecto/:id', component: VerMasProyectoComponent },
     {path: 'registro-user', component: RegistroUserComponent },
-    {path: 'login-user', component: LoginUserComponent }
+    {path: '', component: LoginUserComponent },
+    { path: 'logout', component: LogoutComponent },
       
 
 ];

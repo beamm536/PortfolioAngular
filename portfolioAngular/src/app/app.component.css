@@ -1,4 +1,4 @@
-* {
+/** {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -41,7 +41,7 @@
 /* .nav-link.disabled {
     pointer-events: none;
     opacity: 0.6;
-  } */
+  } *
 
   .barra-navegacion {
     border: 2px solid black;
@@ -74,7 +74,78 @@
   .usuario img {
     height: 50%;
     width: 50%;
-  }
-  
+  }*/
+/* Estilos generales */
+/* Estilos generales */
+.barra-navegacion {
+  border: 2px solid black;
+  height: 80px;
+  background-color: #577a8e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
 
-  
+.logo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.usuario {
+  position: relative; /* Necesario para que el dropdown se posicione respecto a este elemento */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;  /* Ajusta el tamaño según sea necesario */
+  height: 50px;
+}
+
+.usuario img {
+  height: 50%;
+  width: 50%;
+}
+
+.dropdown {
+  position: absolute;
+  top: 60px;  /* Ajusta esto para que el menú baje lo suficiente */
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 6px;
+  z-index: 1000; /* Asegura que aparezca sobre otros elementos */
+  display: block;
+  border: 1px solid red; /* Esto ayuda a depurar si el dropdown está ahí */
+}
+
+/* Estilo del botón de logout */
+.logout-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: darkred;
+}
+
+.logout-btn:focus {
+  outline: none;
+}
