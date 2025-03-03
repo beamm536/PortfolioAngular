@@ -1,7 +1,9 @@
 * {
   font-family: Lato, sans-serif;
 }
-
+.backround {
+ /* background: linear-gradient(to bottom, white, white,#577a8e);}
+ */}
 .card-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Dos tarjetas por fila */
@@ -98,6 +100,42 @@
   transform: translateY(-3px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
+.input {
+  outline: none; /* Elimina el borde de enfoque */
+  border: none; /* Si tiene un borde, lo elimina */
+  background: transparent; /* Si es necesario, asegura que el fondo sea transparente */
+}
+
+.input:focus {
+  outline: none; /* Elimina el borde azul de enfoque */
+  border: none; /* Elimina cualquier borde que pueda aparecer */
+  box-shadow: none; /* Elimina la sombra de enfoque */
+}
+/* Eliminar subrayado en el input */
+.form input {
+  outline: none; /* Elimina el borde azul de enfoque */
+  border: none; /* Elimina cualquier borde */
+  background: transparent; /* Asegura que el fondo sea transparente */
+}
+
+.form input:focus {
+  outline: none; /* Elimina el borde azul de enfoque cuando está enfocado */
+  box-shadow: none; /* Elimina cualquier sombra */
+}
+
+/* Eliminar subrayado en el botón del formulario */
+.form button {
+  outline: none; /* Elimina el borde azul de enfoque */
+  border: none; /* Elimina el borde del botón */
+  background: transparent; /* Si deseas eliminar el fondo del botón */
+}
+
+.form button:focus {
+  outline: none; /* Elimina el borde azul del botón cuando está enfocado */
+  box-shadow: none; /* Elimina cualquier sombra del botón cuando está enfocado */
+}
+
+
 
 @media (max-width: 768px) {
   .card-container {

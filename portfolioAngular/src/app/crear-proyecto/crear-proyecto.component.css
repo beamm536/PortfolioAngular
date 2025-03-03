@@ -1,4 +1,4 @@
-.form {
+/* .form {
   background-color: #fff;
   display: block;
   justify-content: center;
@@ -38,10 +38,10 @@
 .input-container textarea{
   background-color: #fff;
   padding: 1rem;
-  /* padding-right: 3rem; */
+  /* padding-right: 3rem; *
   font-size: 0.875rem;
   line-height: 1.25rem;
-  /* width: calc(100% - 1rem); */
+  /* width: calc(100% - 1rem); *
   border-radius: 0.5rem;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
@@ -65,4 +65,99 @@
 }
 
 
+ */
+ .form {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px;
+  margin: auto;
+  margin-top: 3%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
+.titulo {
+    
+  font-size: 20px;
+  font-weight:bolder;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.input-container input,
+.input-container textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.input-container input:focus,
+.input-container textarea:focus {
+  border-color: #577a8e;
+  box-shadow: 0 0 4px rgba(87, 122, 142, 0.5);
+}
+
+textarea {
+  min-height: 40px;
+  resize: none;
+  overflow: hidden;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.submit {
+  background-color: #51636d;
+  color: white;
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.submit:hover {
+  background-color: #4a6572;
+}
+
+.submit:focus {
+  background-color: #577a8e;
+  outline: none;
+}
+
+.sign-up-label {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
+  color: #777;
+}
+
+.sign-up-link {
+  color: #577a8e;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}

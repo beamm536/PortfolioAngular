@@ -1,9 +1,9 @@
-<p>update-proyecto works!</p>
-<hr />
+   
 <div *ngIf="proyecto">
-  <h2>Editar Proyecto</h2>
+ 
   <form (ngSubmit)="actualizarProyecto()">
     <div class="input-container">
+      <p class="titulo">Editar proyecto </p>
       <input
         type="text"
         placeholder="Título"
@@ -13,7 +13,7 @@
       />
     </div>
 
-    <div class="input-container">
+    <!--<div class="input-container">
       <input
         type="text"
         placeholder="Descripción"
@@ -21,8 +21,23 @@
         name="descripcion"
         required
       />
-    </div>
+    </div>-->
+    <div class="input-container">
+      
+      <textarea
+  placeholder="Descripción"
+  [(ngModel)]="descripcion"
+  name="descripcion"
+  required
+  rows="1"
+  #textArea
+  (input)="autoResize(textArea)"
+  (ngModelChange)="autoResize(textArea)"  
+></textarea>
 
+    </div>
+    
+  
     <div class="input-container">
       <input
         type="text"
@@ -44,5 +59,8 @@
     </div>
 
     <button type="submit">Actualizar</button>
+    <p class="sign-up-label">¿Quieres dejarlo como está? <span class="parrafo-volver sign-up-link" (click)="goToListar()">Volver</span></p>
   </form>
+  
 </div>
+

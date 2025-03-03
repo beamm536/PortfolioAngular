@@ -119,33 +119,34 @@
 
 .dropdown {
   position: absolute;
-  top: 60px;  /* Ajusta esto para que el menú baje lo suficiente */
+  top: 50px; /* Ajuste para que no esté demasiado separado */
   right: 0;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  border-radius: 6px;
-  z-index: 1000; /* Asegura que aparezca sobre otros elementos */
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  border-radius: 4px;
+  z-index: 1000;
   display: block;
-  border: 1px solid red; /* Esto ayuda a depurar si el dropdown está ahí */
+  min-width: 120px; /* Evita que el botón sea demasiado pequeño */
 }
 
-/* Estilo del botón de logout */
 .logout-btn {
-  background-color: red;
-  color: white;
+  background: #e74c3c;
+  color: #fff;
   border: none;
-  padding: 10px 15px;
-  border-radius: 6px;
+  padding: 6px 10px;
+  border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap; /* Evita que se divida en dos líneas */
+  transition: background 0.2s ease;
+  width: 100%;
+  text-align: center;
 }
 
 .logout-btn:hover {
-  background-color: darkred;
-}
-
-.logout-btn:focus {
-  outline: none;
+  background: #c0392b;
 }
