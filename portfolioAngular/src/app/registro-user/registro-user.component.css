@@ -166,3 +166,42 @@ label {
     color: #577a8e; 
     text-decoration: underline; 
 }
+
+/* En pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .form-container {
+        padding: 15px; /* Reducir padding */
+    }
+
+    .button {
+        width: 100%; /* Hacer que el botón ocupe todo el ancho */
+    }
+
+    .title {
+        font-size: 18px; /* Reducir tamaño del título */
+    }
+
+    .input {
+        font-size: 14px; /* Aumentar tamaño de fuente para mejor legibilidad */
+    }
+}
+
+/* En pantallas extra pequeñas (como móviles) */
+@media screen and (max-width: 480px) {
+    .form-container {
+        padding: 10px; /* Reducir padding aún más */
+        min-width: 280px; /* Reducir el ancho mínimo */
+    }
+
+    .button {
+        font-size: 12px; /* Reducir el tamaño de la fuente del botón */
+    }
+
+    .title {
+        font-size: 16px; /* Reducir tamaño del título */
+    }
+
+    .input {
+        font-size: 14px; /* Aumentar tamaño de fuente para mejor legibilidad */
+    }
+}
