@@ -24,7 +24,13 @@ export class LoginUserComponent {
   /* LOGIN CON GOOGLE */
   login() {
     console.log("login")
-    signInWithPopup(this.auth, new GoogleAuthProvider());
+    signInWithPopup(this.auth, new GoogleAuthProvider())
+    .then((result) => {
+      this.router.navigate(['/listar-proyecto']);  
+    })
+    .catch((error) => {
+      console.error("Error al iniciar sesión: ", error);
+    });
   }
 
   goToRegistro() {
