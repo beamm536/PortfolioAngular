@@ -1,9 +1,8 @@
-<p>login-user works!</p>
-<hr>
-
-<!-- Botón de login con Google -->
-<button (click)="login()">Login con Google</button>
-
+<!-- Botón de login con Google 
+<button (click)="login()">Login con Google</button>-->
+<html>
+  <body>
+    
 <div class="form-container">
   <p class="title">Welcome back</p>
 
@@ -31,7 +30,7 @@
   </form>
 
   <p class="sign-up-label">
-    Don't have an account? <span class="sign-up-link">Sign up</span>
+    Don't have an account? <span class="sign-up-link" (click)="goToRegistro()">Sign up</span>
   </p>
 
   <div class="buttons-container">
@@ -47,8 +46,11 @@
         <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571
       c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
       </svg>
-      <span>Log in with Google</span>
+      <span >Log in with Google</span>
     </div>
   </div>
 </div>
 
+  
+</body>
+</html>

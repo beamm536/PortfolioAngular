@@ -1,4 +1,4 @@
-* {
+/** {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -41,7 +41,7 @@
 /* .nav-link.disabled {
     pointer-events: none;
     opacity: 0.6;
-  } */
+  } *
 
   .barra-navegacion {
     border: 2px solid black;
@@ -74,7 +74,79 @@
   .usuario img {
     height: 50%;
     width: 50%;
-  }
-  
+  }*/
+/* Estilos generales */
+/* Estilos generales */
+.barra-navegacion {
+  border: 2px solid black;
+  height: 80px;
+  background-color: #577a8e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
 
-  
+.logo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.usuario {
+  position: relative; /* Necesario para que el dropdown se posicione respecto a este elemento */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;  /* Ajusta el tamaño según sea necesario */
+  height: 50px;
+}
+
+.usuario img {
+  height: 50%;
+  width: 50%;
+}
+
+.dropdown {
+  position: absolute;
+  top: 50px; /* Ajuste para que no esté demasiado separado */
+  right: 0;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  border-radius: 4px;
+  z-index: 1000;
+  display: block;
+  min-width: 120px; /* Evita que el botón sea demasiado pequeño */
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap; /* Evita que se divida en dos líneas */
+  transition: background 0.2s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
