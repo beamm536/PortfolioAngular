@@ -22,16 +22,28 @@ export class ServicioService {
     );
   }
 
-  async crearProyecto(titulo: string, descripcion: string, tecnologias: string, participantes: string) {
-    const proyectosRef = collection(this.firestore, 'proyectos'); // ✅ Corregido
+  // async crearProyecto(titulo: string, descripcion: string, tecnologias: string, participantes: string) {
+  //   const proyectosRef = collection(this.firestore, 'proyectos'); // ✅ Corregido
+  //   const docRef = await addDoc(proyectosRef, {
+  //     titulo,
+  //     descripcion,
+  //     tecnologias,
+  //     participantes
+  //   });
+  //   console.log("Proyecto creado con ID: ", docRef.id);
+  // }
+  async crearProyecto(titulo: string, descripcion: string, tecnologias: string, participantes: string, userId: string) {
+    const proyectosRef = collection(this.firestore, 'proyectos'); // Get the 'proyectos' collection
     const docRef = await addDoc(proyectosRef, {
       titulo,
       descripcion,
       tecnologias,
-      participantes
+      participantes,
+      userId  // Add the user ID to the project data
     });
     console.log("Proyecto creado con ID: ", docRef.id);
   }
+  
 
   async getProyectos() {
     const proyectosRef = collection(this.firestore, 'proyectos');

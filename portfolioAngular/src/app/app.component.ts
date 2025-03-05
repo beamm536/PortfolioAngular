@@ -62,7 +62,7 @@ export class AppComponent {
     });
   }
 
-  // 🔹 Cierra el dropdown si se hace clic fuera de él
+  // Cierra el dropdown si se hace clic fuera de él
   @HostListener('document:click', ['$event'])
   onClickOutside(event: Event) {
     const dropdown = document.querySelector('.dropdown');
