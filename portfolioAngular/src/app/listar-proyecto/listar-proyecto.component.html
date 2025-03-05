@@ -34,14 +34,14 @@
     <p> particpantes: {{ proyecto.participantes }} </p>
 </div>  -->
 
-<div class="card-container">
+<!--<div class="card-container">
   <div *ngFor="let proyecto of filteredProyectos()" class="card" (click)="abrirModal(proyecto)">
-    <img class="card-image" src="" alt="Imagen del proyecto" />
+    <img class="card-image" [src]="proyecto.imagen" alt="Imagen del proyecto" />
     <div class="card-content">
       <h3>{{ proyecto.titulo }}</h3>
       <p><strong>Descripción:</strong> {{ proyecto.descripcion }}</p>
-      <!-- <p><strong>Tecnologías:</strong> {{ proyecto.tecnologias }}</p> -->
-      <!-- <p><strong>Participantes:</strong> {{ proyecto.participantes }}</p> -->
+      <!- <p><strong>Tecnologías:</strong> {{ proyecto.tecnologias }}</p> --
+      <!- <p><strong>Participantes:</strong> {{ proyecto.participantes }}</p> --
     </div>
     <div class="card-footer">
       <a [routerLink]="['/actualizar-proyecto', proyecto.id]">
@@ -49,6 +49,21 @@
       </a>
     </div>
   </div>
+</div>-->
+<div class="card-container">
+<div *ngFor="let proyecto of filteredProyectos()" class="card" (click)="abrirModal(proyecto)">
+  <!-- https://imgur.com/a/PoBNO1y-->
+  <img class="card-image" [src]="proyecto.imagen || 'assets/Noimage.png'" alt="Imagen del proyecto" />
+  <div class="card-content">
+      <h3>{{ proyecto.titulo }}</h3>
+      <p><strong>Descripción:</strong> {{ proyecto.descripcion }}</p>
+  </div>
+  <div class="card-footer">
+      <a [routerLink]="['/actualizar-proyecto', proyecto.id]">
+          <button class="btn-edit">Editar</button>
+      </a>
+  </div>
+</div>
 </div>
 
 <div id="modal" class="modal" *ngIf="mostrarModal">

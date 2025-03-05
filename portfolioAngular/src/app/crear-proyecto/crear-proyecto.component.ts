@@ -68,6 +68,7 @@ export class CrearProyectoComponent implements OnInit {
   tecnologias: string = "";
   participantes: string = "";
   userId: string = "";
+  imagen: string="";
 
   constructor(
     private servicio: ServicioService,
@@ -76,10 +77,10 @@ export class CrearProyectoComponent implements OnInit {
 
   ngOnInit(): void {
     // Initialize Firebase Authentication
-    const auth = getAuth(); // Modular Firebase Auth
+    const auth = getAuth(); 
     onAuthStateChanged(auth, (user: User | null) => {
       if (user) {
-        this.userId = user.uid; // Save user ID
+        this.userId = user.uid; 
       } else {
         console.log('No user logged in');
         this.router.navigate(['/login']);  // Redirect to login if not authenticated
@@ -91,14 +92,14 @@ export class CrearProyectoComponent implements OnInit {
     this.router.navigate(['/listar-proyecto']);
   }
 
-  async addProject(titulo: string, descripcion: string, tecnologias: string, participantes: string) {
+  async addProject(titulo: string, descripcion: string, tecnologias: string, participantes: string, imagen: string) {
     if (!this.userId) {
       alert('User is not logged in. Please log in first.');
       return;
     }
 
     try {
-      await this.servicio.crearProyecto(titulo, descripcion, tecnologias, participantes, this.userId);
+      await this.servicio.crearProyecto(titulo, descripcion, tecnologias, participantes,imagen, this.userId);
       alert('Proyecto creado con éxito');
       this.goToListar();
     } catch (error) {

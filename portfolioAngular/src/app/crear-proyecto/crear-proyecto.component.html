@@ -1,5 +1,5 @@
 
-<form class="form" (ngSubmit) = "addProject(titulo, descripcion, tecnologias, participantes)">
+<form class="form" (ngSubmit) = "addProject(titulo, descripcion, tecnologias, participantes, imagen)">
     <div class="input-container">
       <p class="titulo">Crear proyecto </p>
         <input 
@@ -37,6 +37,16 @@
           required
           [(ngModel)]="participantes" 
           name="participantes"
+        >
+      </div>
+
+      <div class="input-container">
+        <input 
+          type="text" 
+          placeholder="Url imagen" 
+          required
+          [(ngModel)]="imagen" 
+          name="imagen"
         >
       </div>
       
