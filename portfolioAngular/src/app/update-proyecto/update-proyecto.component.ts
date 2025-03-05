@@ -80,6 +80,7 @@ export class UpdateProyectoComponent implements OnInit {
   descripcion: string = '';
   tecnologias: string = '';
   participantes: string = '';
+  imagen: string = '';
   id: string = '';
   proyecto: any = {}; // Asegurarse de que sea un objeto vacío al inicio
   formError: boolean = false;  // Variable para controlar si hay un error en el formulario
@@ -112,6 +113,7 @@ export class UpdateProyectoComponent implements OnInit {
             this.descripcion = proyecto.descripcion || '';
             this.tecnologias = proyecto.tecnologias || '';
             this.participantes = proyecto.participantes || '';
+            this.imagen = proyecto.imagen || '';
             setTimeout(() => {
               const textArea = document.querySelector('textarea') as HTMLTextAreaElement;
               if (textArea) this.autoResize(textArea);
@@ -137,7 +139,8 @@ export class UpdateProyectoComponent implements OnInit {
         this.titulo,
         this.descripcion,
         this.tecnologias,
-        this.participantes
+        this.participantes,
+        this.imagen
       );
       alert('¡Proyecto actualizado con éxito!');
       this.formError = false;  // Restablecer el estado del error
