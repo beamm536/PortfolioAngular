@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Auth, browserLocalPersistence, createUserWithEmailAndPassword, setPersistence, signInWithEmailAndPassword, UserCredential } from '@angular/fire/auth';
-import { addDoc, collection, doc, Firestore, getDocs, getDoc, updateDoc } from '@angular/fire/firestore';
+import { addDoc, collection, doc, Firestore, getDocs, getDoc, updateDoc, query, where } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -45,11 +45,27 @@ export class ServicioService {
   }
   
 
-  async getProyectos() {
+  /*async getProyectos() {
     const proyectosRef = collection(this.firestore, 'proyectos');
     const querySnapshot = await getDocs(proyectosRef);
     return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-  }
+  }*/
+    async getProyectos(): Promise<any[]> {
+      const user = this.auth.currentUser; // Get the currently authenticated user
+      if (!user) {
+        console.log('No user is logged in');
+        return []; // Return empty array if no user is logged in
+      }
+  
+      const userId = user.uid; // Get the user ID of the authenticated user
+      const proyectosRef = collection(this.firestore, 'proyectos');
+      const q = query(proyectosRef, where('userId', '==', userId)); // Filter by userId
+  
+      const querySnapshot = await getDocs(q); // Execute the query
+      const proyectos = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+  
+      return proyectos;
+    }
 
   // Obtener un proyecto por su ID
   async getProyectoById(id: string): Promise<any> {
