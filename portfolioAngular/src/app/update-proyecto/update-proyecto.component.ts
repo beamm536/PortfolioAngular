@@ -144,6 +144,7 @@ export class UpdateProyectoComponent implements OnInit {
       );
       alert('¡Proyecto actualizado con éxito!');
       this.formError = false;  // Restablecer el estado del error
+      this.goToListar();
     } catch (error) {
       alert('Hubo un error al actualizar el proyecto. Intenta nuevamente.');
       console.error(error);
