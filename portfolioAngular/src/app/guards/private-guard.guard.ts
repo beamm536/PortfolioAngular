@@ -25,7 +25,7 @@ export class PrivateAuthGuard implements CanActivate {
   ): MaybeAsync<GuardResult> {
     return this.auth.user$.pipe(
       map((user) => {
-        console.log(user)
+        //console.log(user)
         if (!user) {
           this.router.navigate(['/']);
           return false;

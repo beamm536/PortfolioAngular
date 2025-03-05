@@ -32,17 +32,37 @@ export class ServicioService {
   //   });
   //   console.log("Proyecto creado con ID: ", docRef.id);
   // }
-  async crearProyecto(titulo: string, descripcion: string, tecnologias: string, participantes: string, userId: string) {
+  async crearProyecto(titulo: string, descripcion: string, tecnologias: string, participantes: string, imagen: string, userId: string) {
     const proyectosRef = collection(this.firestore, 'proyectos'); // Get the 'proyectos' collection
     const docRef = await addDoc(proyectosRef, {
       titulo,
       descripcion,
       tecnologias,
       participantes,
-      userId  // Add the user ID to the project data
+      imagen,
+      userId,  
+      
     });
     console.log("Proyecto creado con ID: ", docRef.id);
+  }/*const imagenConvertida = this.convertirURLDrive(imagen); // Convertimos la URL
+
+  const docRef = await addDoc(proyectosRef, {
+    titulo,
+    descripcion,
+    tecnologias,
+    participantes,
+    imagen: imagenConvertida, // Guardamos la URL convertida
+    userId,  
+  });
+
+  console.log("Proyecto creado con ID: ", docRef.id);
+}
+*/
+  convertirURLDrive(url: string): string {
+    const match = url.match(/\/d\/(.*?)\//); // Extrae el ID del archivo
+    return match ? `https://drive.google.com/uc?id=${match[1]}` : url;
   }
+  
   
 
   /*async getProyectos() {
