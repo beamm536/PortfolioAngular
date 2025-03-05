@@ -100,13 +100,14 @@ export class ServicioService {
   }
 
 
-  async updateProyectos(id: string, titulo: string, descripcion: string, tecnologias: string, participantes: string) {
+  async updateProyectos(id: string, titulo: string, descripcion: string, tecnologias: string, participantes: string, imagen: string) {
     const proyectoRef = doc(this.firestore, 'proyectos', id);
     return await updateDoc(proyectoRef, {
       titulo,
       descripcion,
       tecnologias,
-      participantes
+      participantes,
+      imagen
     });
   }
 

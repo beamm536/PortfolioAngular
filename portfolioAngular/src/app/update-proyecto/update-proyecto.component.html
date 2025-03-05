@@ -58,6 +58,16 @@
       />
     </div>
 
+    <div class="input-container">
+      <input
+        type="text"
+        placeholder="Imagen"
+        [(ngModel)]="imagen"
+        name="imagen"
+        required
+      />
+    </div>
+
     <button type="submit">Actualizar</button>
     <p class="sign-up-label">¿Quieres dejarlo como está? <span class="parrafo-volver sign-up-link" (click)="goToListar()">Volver</span></p>
   </form>
