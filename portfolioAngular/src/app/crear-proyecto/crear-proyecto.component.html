@@ -1,7 +1,7 @@
-<p>crear-proyecto works!</p>
-<hr>
-<form class="form" (ngSubmit) = "addProject(titulo, descripcion, tecnologias, participantes)">
+
+<form class="form" (ngSubmit) = "addProject(titulo, descripcion, tecnologias, participantes, imagen)">
     <div class="input-container">
+      <p class="titulo">Crear proyecto </p>
         <input 
           type="text" 
           placeholder="Título del proyecto" 
@@ -39,9 +39,20 @@
           name="participantes"
         >
       </div>
+
+      <div class="input-container">
+        <input 
+          type="text" 
+          placeholder="Url imagen" 
+          required
+          [(ngModel)]="imagen" 
+          name="imagen"
+        >
+      </div>
       
       <button type="submit" class="submit">
         Enviar
       </button>
+      <p class="sign-up-label">¿No quieres crear un proyecto nuevo? <span class="parrafo-volver sign-up-link" (click)="goToListar()">Volver</span></p>
   </form>
   

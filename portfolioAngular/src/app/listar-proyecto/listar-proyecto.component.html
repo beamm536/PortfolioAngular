@@ -1,5 +1,31 @@
-<p>listar-proyecto works!</p>
-<hr>
+<!-- Contenedor principal con display flex -->
+<div class="backround">
+<div class="container">
+  <!-- Barra de búsqueda -->
+  <form class="form">
+    <button>
+      <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+        <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </button>
+    <input type="text" [(ngModel)]="searchTerm" name="search" placeholder="Buscar proyectos" class="input">
+    <button class="reset" type="reset">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </form>
+
+  <!-- Botón + -->
+  <div tabindex="0" class="plusButton" routerLink="/crear-proyecto">
+    <svg class="plusIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+      <g mask="url(#mask0_21_345)">
+        <path d="M13.75 23.75V16.25H6.25V13.75H13.75V6.25H16.25V13.75H23.75V16.25H16.25V23.75H13.75Z"></path>
+      </g>
+    </svg>
+  </div>
+</div>
+
 
 <!-- <div *ngFor="let proyecto of proyectos">
     <h3> {{ proyecto.titulo }} </h3>
@@ -8,23 +34,36 @@
     <p> particpantes: {{ proyecto.participantes }} </p>
 </div>  -->
 
-<div class="card-container">
-  <div *ngFor="let proyecto of proyectos" class="card">
-    <div class="card-header">
+<!--<div class="card-container">
+  <div *ngFor="let proyecto of filteredProyectos()" class="card" (click)="abrirModal(proyecto)">
+    <img class="card-image" [src]="proyecto.imagen" alt="Imagen del proyecto" />
+    <div class="card-content">
       <h3>{{ proyecto.titulo }}</h3>
-    </div>
-    <div class="card-body">
       <p><strong>Descripción:</strong> {{ proyecto.descripcion }}</p>
-      <p><strong>Tecnologías:</strong> {{ proyecto.tecnologias }}</p>
-      <p><strong>Participantes:</strong> {{ proyecto.participantes }}</p>
+      <!- <p><strong>Tecnologías:</strong> {{ proyecto.tecnologias }}</p> --
+      <!- <p><strong>Participantes:</strong> {{ proyecto.participantes }}</p> --
     </div>
     <div class="card-footer">
-      <button class="btn-more" (click)="abrirModal(proyecto)">Ver más</button>
       <a [routerLink]="['/actualizar-proyecto', proyecto.id]">
         <button class="btn-edit">Editar</button>
       </a>
     </div>
   </div>
+</div>-->
+<div class="card-container">
+<div *ngFor="let proyecto of filteredProyectos()" class="card" (click)="abrirModal(proyecto)">
+  <!-- https://imgur.com/a/PoBNO1y-->
+  <img class="card-image" [src]="proyecto.imagen || 'assets/Noimage.png'" alt="Imagen del proyecto" />
+  <div class="card-content">
+      <h3>{{ proyecto.titulo }}</h3>
+      <p><strong>Descripción:</strong> {{ proyecto.descripcion }}</p>
+  </div>
+  <div class="card-footer">
+      <a [routerLink]="['/actualizar-proyecto', proyecto.id]">
+          <button class="btn-edit">Editar</button>
+      </a>
+  </div>
+</div>
 </div>
 
 <div id="modal" class="modal" *ngIf="mostrarModal">
@@ -38,3 +77,4 @@
   </div>
 </div>
 
+</div>
