@@ -38,6 +38,7 @@
   background-color: #ddd;
   border-radius: 8px;
   object-fit: cover;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
 /*.card-image {
   width: 100%;
@@ -171,47 +172,118 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Efecto de sombra más grande */
 }
 
+
 .modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
 .modal-content {
-  background: white;
+  background: linear-gradient(135deg, #f8f9fa, #dee2e6);
   padding: 20px;
   border-radius: 10px;
-  max-width: 500px;
-  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 450px;
+  max-width: 90%;
+  text-align: left;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
+/* Botón de cerrar con fondo circular */
 .close {
-  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
   font-size: 20px;
   font-weight: bold;
-  float: right;
+  color: #fff;
+  background: #524d4d;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  border: none;
 }
 
-/* Botón de acción */
+.close:hover {
+  background: #2c2a2a;
+  transform: scale(1.1);
+}
+
+/* Imagen del proyecto dentro del modal */
+.modal-img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Título centrado */
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Contenedor del contenido alineado a la izquierda */
+.modal-body p {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.modal-body p strong {
+  font-weight: bold;
+  color: #222;
+  width: 120px; /* Ancho fijo para alineación */
+  text-align: left;
+}
+
+.modal-body p span {
+  margin-left: 10px; /* Espacio entre título y contenido */
+  flex-grow: 1;
+  text-align: left;
+}
+
+/* Botón de eliminar */
 .btn-eliminar {
-  background-color: #ff0000;
+  background: #e63946;
   color: white;
+  padding: 10px 15px;
   border: none;
-  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  transition: background 0.3s;
 }
 
 .btn-eliminar:hover {
-  background-color: #b30000;
+  background: #c53030;
 }
+
 /* From Uiverse.io by satyamchaudharydev */ 
 /* From uiverse.io by @satyamchaudharydev */
 /* removing default style of button */
