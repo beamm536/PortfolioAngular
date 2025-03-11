@@ -1,8 +1,9 @@
 # PortfolioAngular_proyectos
 Este es un proyecto desarrollado utilizando Angular para la interfaz web y Firebase como backend para la gestión de datos y autenticación. El proyecto permite a los usuarios gestionar sus proyectos de manera eficiente, visualizando los detalles y editando información.
 
+## Caracteristicas
 
-### Login/Registro 🔒👥
+## Login/Registro 🔒👥
 + Registrarse para crear una cuenta.
 + Login con **correo y contraseña** / Login con **Google** 
 *Cada usuario accede a sus proyectos guardados.*
