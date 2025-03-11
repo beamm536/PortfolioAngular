@@ -16,6 +16,7 @@ import { Router } from '@angular/router';
 })
 export class RegistroUserComponent {
   
+  fotoLogo: string = 'assets/logoSin.png';
 
    constructor(
       public auth:Auth,

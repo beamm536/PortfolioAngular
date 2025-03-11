@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class LoginUserComponent {
   email: string = "";
   password: string = "";
+  fotoLogo: string = 'assets/logoSin.png';
  
 
   constructor(
